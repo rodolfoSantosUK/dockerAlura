@@ -1,0 +1,30 @@
+sudo usermod -aG docker ${USER}
+su - ${USER}
+
+Para listar todos os containers
+    docker ps -a
+
+Acessar o outro container de modo interativo
+    docker start -a -i a69
+
+Listar todas as imagens
+    docker images
+
+Remover uma determinada imagem
+    docker rmi hello-world
+
+Dar stop em um container
+    docker stop -t 0 id
+
+Mapeia as portas do container com as portas do meu host
+    docker run -d -P dockersamples/static-site
+
+Para ver o mapeamento das portas
+    docker port ip
+
+Mapeando a porta especifica para a porta interna do container
+    docker run -d -p 1235:80 dockersamples/static-site
+
+Mapeando a porta, criando container com nome, definindo variavel de ambiente
+    docker run -d -p 3333:80 --name meu-site -e AUTHOR="Rodolfo Santos" dockersamples/static-site
+
