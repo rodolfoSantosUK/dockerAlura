@@ -1,0 +1,3 @@
+
+Mapeando volume do host com o container docker
+    docker run -it -v "/home/ubuntu20/dev/docker:/var/docker" ubuntu

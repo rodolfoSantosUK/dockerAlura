@@ -1,0 +1,4 @@
+
+
+Roda um container node e executa no work diretory o comando npm start
+    docker  run -p 8080:3000 -v "/home/ubuntu20/dev/docker:var/docker" -w "var/docker" node npm start
